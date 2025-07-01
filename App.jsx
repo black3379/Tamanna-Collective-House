@@ -6,14 +6,14 @@ import { ShoppingCart, Search, Menu } from "lucide-react";
 import { motion } from "framer-motion";
 import { BrowserRouter as Router, Routes, Route, Link, useParams } from "react-router-dom";
 
-// 🟢 Dummy category data
+// Category data
 const categoryData = {
   clothing: ["T-shirt", "Jacket", "Pants"],
   "home-decor": ["Lamp", "Wall Art", "Vase"],
   accessories: ["Watch", "Sunglasses", "Bag"],
 };
 
-// 🟡 Category Page Component
+// Category page component
 function CategoryPage() {
   const { name } = useParams();
   const items = categoryData[name] || [];
@@ -43,7 +43,7 @@ function CategoryPage() {
   );
 }
 
-// 🔵 Home Page
+// Homepage component
 function HomePage() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
@@ -81,7 +81,7 @@ function HomePage() {
   );
 }
 
-// 🔐 Login & Signup
+// Login page component
 function LoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -98,6 +98,7 @@ function LoginPage() {
   );
 }
 
+// Signup page component
 function SignupPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -115,7 +116,7 @@ function SignupPage() {
   );
 }
 
-// 🌐 Main Router
+// Main router for all routes
 export default function AppRouter() {
   return (
     <Router>
